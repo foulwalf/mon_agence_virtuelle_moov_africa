@@ -7,6 +7,8 @@ import 'package:mon_agence_virtuelle_moov_africa/shared_components/elevatedbutto
 import 'package:mon_agence_virtuelle_moov_africa/shared_components/textfield_generator.dart';
 import 'package:mon_agence_virtuelle_moov_africa/shared_components/vertical_spacer.dart';
 
+import '../../Main_Scaffold/main_scaffold.dart';
+
 
 ///strcuture du corps de la page de connexion
 ///contient tous les widgets tels que le texte de bienvenue, les hints
@@ -67,7 +69,14 @@ class Body extends StatelessWidget {
                       ElevatedButtonWithIconGenerator(
                         label: "CONNNEXION",
                         iconData: Icons.login_rounded,
-                        onPressFunction: () {},
+                        onPressFunction: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => Accueil(),
+                            ),
+                          );
+                        },
                       ),
                       VerticalSpacerGenerator(
                         height: 20,
