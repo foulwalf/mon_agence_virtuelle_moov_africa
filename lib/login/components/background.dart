@@ -36,7 +36,7 @@ class Background extends StatelessWidget {
             top: 70,
             left: -200,
             child: Image(
-              image: AssetImage("assets/images/bg/bg/blue_border_rectangle.png"),
+              image: AssetImage("assets/images/bg/blue_border_rectangle.png"),
             ),
           ),
           //les triangles du bas
