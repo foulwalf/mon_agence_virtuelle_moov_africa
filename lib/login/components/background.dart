@@ -20,7 +20,7 @@ class Background extends StatelessWidget {
             top: -300,
             right: -300,
             child: Image(
-              image: AssetImage("assets/images/blue_circle.png"),
+              image: AssetImage("assets/images/bg/blue_circle.png"),
             ),
           ),
           //la barre orange
@@ -28,7 +28,7 @@ class Background extends StatelessWidget {
             top: 10,
             left: -300,
             child: Image(
-              image: AssetImage("assets/images/orange_border_rectangle.png"),
+              image: AssetImage("assets/images/bg/orange_border_rectangle.png"),
             ),
           ),
           //la barre bleue
@@ -36,7 +36,7 @@ class Background extends StatelessWidget {
             top: 70,
             left: -200,
             child: Image(
-              image: AssetImage("assets/images/blue_border_rectangle.png"),
+              image: AssetImage("assets/images/bg/bg/blue_border_rectangle.png"),
             ),
           ),
           //les triangles du bas
@@ -44,7 +44,7 @@ class Background extends StatelessWidget {
             bottom: -350,
             left: -300,
             child: Image(
-              image: AssetImage("assets/images/4_rectangles_top_blue.png"),
+              image: AssetImage("assets/images/bg/4_rectangles_top_blue.png"),
             ),
           ),
           //white sheet
