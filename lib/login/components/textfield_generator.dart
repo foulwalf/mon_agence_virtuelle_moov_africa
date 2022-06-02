@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:mon_agence_virtuelle_moov_africa/shared_components/constants.dart';
+import 'package:mon_agence_virtuelle_moov_africa/constants/constants.dart';
 
 ///génère un textfield en prenant en paramêtre le hintText,
 ///la prefixIcon et suffixIcon au format Icon.nom_icone

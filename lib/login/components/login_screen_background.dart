@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mon_agence_virtuelle_moov_africa/shared_components/constants.dart';
+import 'package:mon_agence_virtuelle_moov_africa/constants/constants.dart';
 
 ///pile permettant de positionner les élément de base de la page de connexion
 ///de sorte à donner un efffet d'arrière plan
@@ -51,7 +51,7 @@ class Background extends StatelessWidget {
           Container(
             height: size.height,
             width: double.infinity,
-            decoration: BoxDecoration(color: white.withOpacity(.5)),
+            decoration: BoxDecoration(color: white.withOpacity(.3)),
           ),
           //flou
           // BackdropFilter(

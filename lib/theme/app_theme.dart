@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mon_agence_virtuelle_moov_africa/shared_components/constants.dart';
+import 'package:mon_agence_virtuelle_moov_africa/constants/constants.dart';
 
 MyMoovTheme currentTheme = MyMoovTheme();
 
