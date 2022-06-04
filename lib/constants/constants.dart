@@ -12,5 +12,7 @@ const secondaryColorShade2 = Color(0xFFF39959);
 const secondaryColorShade3 = Color(0xFFF6B383);
 const secondaryColorShade4 = Color(0xFFF9CCAC);
 const inactiveColor = Color(0xFF808080);
+const grayBackgroundColor = Color(0xFFF2F2F2);
+const mixedBlueWhiteBackgroundColor = Color(0xFFf3f5f9);
 const black = Colors.black;
 const white = Colors.white;

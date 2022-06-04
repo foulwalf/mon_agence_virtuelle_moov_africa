@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:mon_agence_virtuelle_moov_africa/login/login_screen.dart';
 import 'package:mon_agence_virtuelle_moov_africa/otp/otp_screen.dart';
 import 'package:mon_agence_virtuelle_moov_africa/theme/app_theme.dart';
 
 void main() {
-  runApp(MonAgenceVirtuelleMoovAfrica());
+  runApp(const MonAgenceVirtuelleMoovAfrica());
 }
 
 class MonAgenceVirtuelleMoovAfrica extends StatefulWidget {
+  const MonAgenceVirtuelleMoovAfrica({Key? key}) : super(key: key);
+
   @override
   _MonAgenceVirtuelleMoovAfrica createState() =>
       _MonAgenceVirtuelleMoovAfrica();
@@ -26,8 +27,8 @@ class _MonAgenceVirtuelleMoovAfrica
       title: "Mon agence virtuelle Moov Africa",
       debugShowCheckedModeBanner: false,
       home: const OtpScreen(),
-      theme: MyMoovTheme.light,
-      darkTheme: MyMoovTheme.dark,
+      theme: AppTheme.light,
+      darkTheme: AppTheme.dark,
       themeMode: currentTheme.currentTheme,
     );
   }
