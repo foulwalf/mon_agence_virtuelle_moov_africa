@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mon_agence_virtuelle_moov_africa/shared_components/constants.dart';
+import 'package:mon_agence_virtuelle_moov_africa/constants/constants.dart';
 
-MyMoovTheme currentTheme = MyMoovTheme();
+AppTheme currentTheme = AppTheme();
 
-class MyMoovTheme with ChangeNotifier {
+class AppTheme with ChangeNotifier {
   static bool _isDarkThemOn = false;
 
   ThemeMode get currentTheme =>
@@ -39,7 +39,7 @@ class MyMoovTheme with ChangeNotifier {
         cursorColor: primaryColor,
       ),
       primaryColor: primaryColor,
-      scaffoldBackgroundColor: Colors.white,
+      scaffoldBackgroundColor: mixedBlueWhiteBackgroundColor,
       inputDecorationTheme: InputDecorationTheme(
         focusColor: primaryColor,
         focusedBorder: OutlineInputBorder(

@@ -25,3 +25,8 @@ doc/api/
 
 .flutter-plugins
 .flutter-plugins-dependencies
+
+#custom added folder
+.linux/
+.windows/
+.macos/
