@@ -39,7 +39,7 @@ class AppTheme with ChangeNotifier {
         cursorColor: primaryColor,
       ),
       primaryColor: primaryColor,
-      scaffoldBackgroundColor: Colors.white,
+      scaffoldBackgroundColor: mixedBlueWhiteBackgroundColor,
       inputDecorationTheme: InputDecorationTheme(
         focusColor: primaryColor,
         focusedBorder: OutlineInputBorder(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mon_agence_virtuelle_moov_africa/home/home_screen.dart';
 import 'package:mon_agence_virtuelle_moov_africa/otp/otp_screen.dart';
 import 'package:mon_agence_virtuelle_moov_africa/theme/app_theme.dart';
 
@@ -26,7 +27,7 @@ class _MonAgenceVirtuelleMoovAfrica
     return MaterialApp(
       title: "Mon agence virtuelle Moov Africa",
       debugShowCheckedModeBanner: false,
-      home: const OtpScreen(),
+      home: const HomeScreen(),
       theme: AppTheme.light,
       darkTheme: AppTheme.dark,
       themeMode: currentTheme.currentTheme,
