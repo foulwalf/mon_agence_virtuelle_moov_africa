@@ -16,3 +16,52 @@ const grayBackgroundColor = Color(0xFFF2F2F2);
 const mixedBlueWhiteBackgroundColor = Color(0xFFf3f5f9);
 const black = Colors.black;
 const white = Colors.white;
+const red = Colors.red;
+const defaultSpace = 20.0;
+const defaultRadius = 10.0;
+const defaultIconSize = 24.0;
+const elevation = 3.5;
+final List<BoxShadow> whiteBoxShadows = [
+  //bottom shadow
+  BoxShadow(
+    offset: const Offset(0, 3),
+    blurRadius: 10,
+    spreadRadius: -10,
+    color: primaryColor.withOpacity(0.25),
+  ),
+  //top shadow
+  BoxShadow(
+    offset: const Offset(0, -3),
+    blurRadius: 10,
+    spreadRadius: -10,
+    color: primaryColor.withOpacity(0.25),
+  ),
+  //right shadow
+  BoxShadow(
+    offset: const Offset(3, 0),
+    blurRadius: 10,
+    spreadRadius: -10,
+    color: primaryColor.withOpacity(0.25),
+  ),
+  //left shadow
+  BoxShadow(
+    offset: const Offset(-3, 0),
+    blurRadius: 10,
+    spreadRadius: -10,
+    color: primaryColor.withOpacity(0.25),
+  ),
+];
+final List<BoxShadow> blueBoxShadows = [
+  BoxShadow(
+    color: Colors.grey.shade300,
+    spreadRadius: 0.0,
+    blurRadius: elevation,
+    offset: const Offset(3.0, 3.0),
+  ),
+  BoxShadow(
+    color: Colors.grey.shade400,
+    spreadRadius: 0.0,
+    blurRadius: elevation / 2.0,
+    offset: const Offset(3.0, 3.0),
+  ),
+];

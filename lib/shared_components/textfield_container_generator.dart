@@ -18,7 +18,7 @@ class TextFieldContainerGenerator extends StatelessWidget {
     return DecoratedBox(
       decoration: BoxDecoration(
         color: primaryColorShade4,
-        borderRadius: BorderRadius.circular(6),
+        borderRadius: BorderRadius.circular(defaultRadius),
       ),
       child: SizedBox(
         width: width,

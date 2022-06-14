@@ -3,11 +3,12 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:mon_agence_virtuelle_moov_africa/otp/components/otp_screen_background.dart';
 import 'package:mon_agence_virtuelle_moov_africa/otp/components/otp_inputfield_generator.dart';
+import 'package:mon_agence_virtuelle_moov_africa/otp/components/otp_validity_timer_generator.dart';
 import 'package:mon_agence_virtuelle_moov_africa/shared_components/textfield_container_generator.dart';
 import 'package:mon_agence_virtuelle_moov_africa/shared_components/caption_text_generator.dart';
 import 'package:mon_agence_virtuelle_moov_africa/constants/constants.dart';
 import 'package:mon_agence_virtuelle_moov_africa/shared_components/elevatedbutton_with_icon_generator.dart';
-import 'package:mon_agence_virtuelle_moov_africa/shared_components/vertical_spacer.dart';
+import 'package:mon_agence_virtuelle_moov_africa/shared_components/vertical_spacer_generator.dart';
 
 ///strcuture du corps de la page de connexion
 ///contient tous les widgets tels que le texte de bienvenue, les hints
@@ -68,8 +69,12 @@ class _OtpScreenBodyState extends State<OtpScreenBody> {
   @override
   Widget build(BuildContext context) {
     var otpValidity = '$minutes : $seconds';
-    bool switchFocus() {
+    bool goToNextInput() {
       return FocusScope.of(context).nextFocus();
+    }
+
+    bool goToPreviousInput() {
+      return FocusScope.of(context).previousFocus();
     }
 
     final theme = Theme.of(context).textTheme;
@@ -116,7 +121,9 @@ class _OtpScreenBodyState extends State<OtpScreenBody> {
                             width: 60,
                             child: OtpInputFieldGenerator(
                               onChanged: (value) {
-                                if (value.length == 1) switchFocus();
+                                if (value.length == 1) {
+                                  goToNextInput();
+                                }
                               },
                             ),
                           ),
@@ -125,7 +132,11 @@ class _OtpScreenBodyState extends State<OtpScreenBody> {
                             width: 60,
                             child: OtpInputFieldGenerator(
                               onChanged: (value) {
-                                if (value.length == 1) switchFocus();
+                                if (value.length == 1) {
+                                  goToNextInput();
+                                } else {
+                                  goToPreviousInput();
+                                }
                               },
                             ),
                           ),
@@ -134,7 +145,11 @@ class _OtpScreenBodyState extends State<OtpScreenBody> {
                             width: 60,
                             child: OtpInputFieldGenerator(
                               onChanged: (value) {
-                                if (value.length == 1) switchFocus();
+                                if (value.length == 1) {
+                                  goToNextInput();
+                                } else {
+                                  goToPreviousInput();
+                                }
                               },
                             ),
                           ),
@@ -143,7 +158,11 @@ class _OtpScreenBodyState extends State<OtpScreenBody> {
                             width: 60,
                             child: OtpInputFieldGenerator(
                               onChanged: (value) {
-                                if (value.length == 1) switchFocus();
+                                if (value.length == 1) {
+                                  goToNextInput();
+                                } else {
+                                  goToPreviousInput();
+                                }
                               },
                             ),
                           ),
@@ -151,7 +170,11 @@ class _OtpScreenBodyState extends State<OtpScreenBody> {
                             height: 60,
                             width: 60,
                             child: OtpInputFieldGenerator(
-                              onChanged: (value) {},
+                              onChanged: (value) {
+                                if (value.isEmpty) {
+                                  goToPreviousInput();
+                                }
+                              },
                             ),
                           ),
                         ],
@@ -168,16 +191,9 @@ class _OtpScreenBodyState extends State<OtpScreenBody> {
                     VerticalSpacerGenerator(
                       height: 20,
                     ),
-                    Visibility(
-                      replacement: CaptionTextGenerator(
-                        text: "Demander un nouveau code après $otpValidity",
-                        color: black,
-                      ),
-                      visible: !isOtpCodeValide,
-                      child: const CaptionTextGenerator(
-                        text: "Le code n'est plus valide",
-                        color: black,
-                      ),
+                    OtpValidityTimerGenerator(
+                      otpValidity: otpValidity,
+                      isOtpCodeValide: isOtpCodeValide,
                     ),
                     VerticalSpacerGenerator(
                       height: 15,
@@ -192,7 +208,6 @@ class _OtpScreenBodyState extends State<OtpScreenBody> {
                             seconds = otpValiditySeconds;
                             startTimer();
                           });
-                          print("Mode invité");
                         },
                         child: SizedBox(
                           height: 40,

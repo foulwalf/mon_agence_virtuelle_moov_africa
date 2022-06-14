@@ -5,12 +5,12 @@ import 'package:mon_agence_virtuelle_moov_africa/constants/constants.dart';
 ///génère un textfield en prenant en paramêtre le hintText,
 ///la prefixIcon et suffixIcon au format Icon.nom_icone
 /// et la valeur du onChanged
-class TextFieldGenerator extends StatelessWidget {
+class LoginTextFieldGenerator extends StatelessWidget {
   final String hintText;
   final prefixIcon;
   final suffixIcon;
   final ValueChanged<String> onChanged;
-  const TextFieldGenerator({
+  const LoginTextFieldGenerator({
     Key? key,
     required this.hintText,
     required this.prefixIcon,

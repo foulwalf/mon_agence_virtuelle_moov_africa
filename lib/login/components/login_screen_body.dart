@@ -5,7 +5,7 @@ import 'package:mon_agence_virtuelle_moov_africa/shared_components/caption_text_
 import 'package:mon_agence_virtuelle_moov_africa/constants/constants.dart';
 import 'package:mon_agence_virtuelle_moov_africa/shared_components/elevatedbutton_with_icon_generator.dart';
 import 'package:mon_agence_virtuelle_moov_africa/login/components/textfield_generator.dart';
-import 'package:mon_agence_virtuelle_moov_africa/shared_components/vertical_spacer.dart';
+import 'package:mon_agence_virtuelle_moov_africa/shared_components/vertical_spacer_generator.dart';
 
 ///strcuture du corps de la page de connexion
 ///contient tous les widgets tels que le texte de bienvenue, les hints
@@ -22,7 +22,7 @@ class Body extends StatelessWidget {
         height: double.infinity,
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
-          child: Container(
+          child: SizedBox(
             height: size.height,
             child: Padding(
               padding: const EdgeInsets.symmetric(
@@ -52,7 +52,7 @@ class Body extends StatelessWidget {
                     TextFieldContainerGenerator(
                       width: size.width * .8,
                       height: 60,
-                      child: TextFieldGenerator(
+                      child: LoginTextFieldGenerator(
                         hintText: "Numéro de téléphone",
                         prefixIcon: Icons.sim_card,
                         suffixIcon: null,
@@ -81,9 +81,7 @@ class Body extends StatelessWidget {
                       height: 15,
                     ),
                     GestureDetector(
-                      onTap: () {
-                        print("Mode invité");
-                      },
+                      onTap: () {},
                       child: Text(
                         "Mode invité",
                         style: theme.bodyMedium?.copyWith(

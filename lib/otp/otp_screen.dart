@@ -12,8 +12,9 @@ class _OtpScreenState extends State<OtpScreen> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      resizeToAvoidBottomInset: false,
-      body: SafeArea(child: OtpScreenBody()),
+      body: SafeArea(
+        child: OtpScreenBody(),
+      ),
     );
   }
 }
