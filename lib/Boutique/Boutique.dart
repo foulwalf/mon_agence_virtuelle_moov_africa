@@ -5,14 +5,14 @@ import './Types/Telephones.dart';
 // import './components/NavBarTab.dart';
 
 
-class Ventes extends StatefulWidget {
-  const Ventes({Key? key}) : super(key: key);
+class Boutique extends StatefulWidget {
+  const Boutique({Key? key}) : super(key: key);
 
   @override
-  _Ventes createState() => _Ventes();
+  _Boutique createState() => _Boutique();
 }
 
-class _Ventes extends State<Ventes> {
+class _Boutique extends State<Boutique> {
 
   int index=0;
   // This widget is the root of your application.
@@ -28,7 +28,7 @@ class _Ventes extends State<Ventes> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children:  [
-                const Text('Ventes',style:  TextStyle(
+                const Text('Boutique',style:  TextStyle(
                     color:Colors.white,
                     fontSize: 38.0
                 )),

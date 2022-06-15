@@ -73,14 +73,14 @@ class _Telephones extends State<Telephones> {
                             const SizedBox(
                               height: 140,
                             ),
-                            Text('Samsung Galaxy S21',textAlign: TextAlign.center,style: TextStyle(
+                            const Text('Samsung Galaxy S21',textAlign: TextAlign.center,style: TextStyle(
                                 color: secondaryColor,
                                 fontSize: 20
                             )),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                const Text('550.000 FCFA',style: TextStyle(
+                              children: const [
+                                Text('550.000 FCFA',style: TextStyle(
                                     color: secondaryColor,
                                     fontSize: 20
                                 )),

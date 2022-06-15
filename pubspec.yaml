@@ -67,6 +67,9 @@ flutter:
     - assets/images/pictures/s21.jpg
     - assets/images/pictures/shop-cart.png
     - assets/images/pictures/help.png
+    - assets/images/pictures/4g.jpg
+    - assets/images/pictures/ask.jpg
+    - assets/images/pictures/claim.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

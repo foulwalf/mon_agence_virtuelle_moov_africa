@@ -4,8 +4,10 @@ import 'package:mon_agence_virtuelle_moov_africa/constants/constants.dart';
 import 'package:mon_agence_virtuelle_moov_africa/home/components/home_screen_body.dart';
 import 'package:mon_agence_virtuelle_moov_africa/shared_components/bottom_navbar/bottom_navbar_generator.dart';
 
-import '../Service_Client/Service_Client.dart';
-import '../Ventes/Ventes.dart';
+import '../Aide/Aide.dart';
+import '../Boutique/Boutique.dart';
+import '../Boutique/Boutique.dart';
+import '../Services/Services.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -170,16 +172,16 @@ class _HomeScreenState extends State<HomeScreen> {
         return const HomeScreenBody();
         break; // The switch statement must be told to exit, or it will execute every case.
       case 1:
-        print('one!');
+        return const Services();
         break;
       case 2:
-        return const Ventes();
+        return const Boutique();
         break;
       case 3:
-        return const Service_Client();
+        return const Aide();
         break;
       case 4:
-        return const Service_Client();
+        return const Aide();
       default:
         print('choose a different number!');
     }
