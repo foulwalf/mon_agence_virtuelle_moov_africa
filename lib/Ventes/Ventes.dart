@@ -1,7 +1,8 @@
-import 'package:carousel_slider/carousel_slider.dart';
+// import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import './Types/Eq_Int.dart';
-import './components/NavBarTab.dart';
+import '../constants/constants.dart';
+import './Types/Telephones.dart';
+// import './components/NavBarTab.dart';
 
 
 class Ventes extends StatefulWidget {
@@ -18,89 +19,89 @@ class _Ventes extends State<Ventes> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: SingleChildScrollView(
+    return Container(
+      color:primaryColor,
+      child: SingleChildScrollView(
         child: Column(
           children:  [
-            // DefaultTabController(
-            //     length: 4,
-            //     child:NavBarTab()
-            // ),
-
-            SizedBox(height: 24.0,),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25.0),
-              child: Container(
-                  width: double.infinity,
-                  height: 60,
-                  child: TextField(
-                    style: theme.textTheme.bodyText1,
-                    decoration: InputDecoration(
-                        prefixIcon: const Icon(Icons.search),
-                        contentPadding: const EdgeInsets.only(top:1.0,left:10.0),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.0),
-                        ),
-                        filled: true,
-                        hintStyle: TextStyle(color: Colors.grey[800]),
-                        hintText: "Que recherchez vous?",
-                        fillColor: Colors.grey.shade300
-                    ),
-                  )
-              ),
+            const SizedBox(height: 54.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children:  [
+                const Text('Ventes',style:  TextStyle(
+                    color:Colors.white,
+                    fontSize: 38.0
+                )),
+                Image.asset('assets/images/pictures/shop-cart.png',height: 50)
+              ],
             ),
-            SizedBox(height: 24.0,),
+            const SizedBox(height: 50.0),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  textButton('Equipements internet',0),
-                  textButton('Téléphones',1),
-                  textButton('Habits',2)
-
-                ],
+              child: Container(
+                decoration: const BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(40.0),
+                      topRight: Radius.circular(40.0),
+                    )
+                ),
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                child:  Column(
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.only(top:38.0,left:10.0),
+                      child: Text('Catégories',style: TextStyle(
+                          fontSize: 34.0
+                      )),
+                    ),
+                    const SizedBox(
+                      height: 25.0,
+                    ),
+                    Row(
+                      children: [
+                        textButton('Téléphones', 0),
+                        textButton('Eq. Internet', 1)
+                      ],
+                    ),
+                    const SizedBox(height: 30.0,),
+                    conditionalDisplay(context)
+                  ],
+                ),
               ),
-            ),
-            SizedBox(height: 24.0,),
-            conditionalDisplay()
-
-
+            )
+            // conditionalDisplay()
           ],
         ),
       ),
     );
   }
 
-  Padding textButton(String data,int i){
-    return Padding(
-      padding: const EdgeInsets.only(left: 15.0),
-      child: TextButton(
-          onPressed: (){
-            setState((){
-              index=i;
-            });
-          },
-          style: ButtonStyle(
-            backgroundColor: (index==i)? MaterialStateProperty.all(const Color(0xFF03A9F4)):MaterialStateProperty.all(const Color(0xFFFFFFFF)),
-              fixedSize: MaterialStateProperty.all(const Size(130.0, 70.0)),
-              shape: MaterialStateProperty.all(
-                  RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18.0),
-                      side: const BorderSide(color: Colors.red)
-                  )
-              )
-          ),
-          child:Text(data,textAlign: TextAlign.center,style: TextStyle(
-            color: (index==i)? Colors.white : Colors.blueAccent
-          ),)
-      ),
+
+  TextButton textButton(String data,int i){
+    return TextButton(
+        onPressed: (){
+          // if(index == i)
+          setState((){
+            index=i;
+          });
+        },
+        child: Text(data,style:  TextStyle(
+            color: (index==i) ? secondaryColor :Colors.black54,
+            fontSize: 19.0
+        ))
     );
   }
-  conditionalDisplay(){
+
+  conditionalDisplay(BuildContext context){
+    var marge=MediaQuery.of(context).size.width/5;
     switch(index){
       case 0 :
-        return const Eq_Int();
+        return  Padding(
+          padding: EdgeInsets.only(left:marge),
+          child: const Telephones(),
+        );
       default:
         return Center();
     }

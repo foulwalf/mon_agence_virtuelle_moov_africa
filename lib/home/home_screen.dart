@@ -4,6 +4,9 @@ import 'package:mon_agence_virtuelle_moov_africa/constants/constants.dart';
 import 'package:mon_agence_virtuelle_moov_africa/home/components/home_screen_body.dart';
 import 'package:mon_agence_virtuelle_moov_africa/shared_components/bottom_navbar/bottom_navbar_generator.dart';
 
+import '../Service_Client/Service_Client.dart';
+import '../Ventes/Ventes.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -12,21 +15,76 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  int activeItem = 0;
+
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-    final theme = Theme.of(context).textTheme;
+    final size = MediaQuery
+        .of(context)
+        .size;
+    final theme = Theme
+        .of(context)
+        .textTheme;
+    GlobalKey widgetKey = GlobalKey();
     return Scaffold(
       appBar: builAppBar(),
-      body: const SafeArea(
-        child: SingleChildScrollView(child: HomeScreenBody()),
+      body:  SafeArea(
+        child: SingleChildScrollView(
+            child: conditionalDisplay() //
+        ),
       ),
-      bottomNavigationBar: const BottomNavigationBarGenerator(),
+      bottomNavigationBar: Material(
+        child: Container(
+          key: widgetKey,
+          height: 70,
+          width: double.infinity,
+          decoration: const BoxDecoration(
+            color: mixedBlueWhiteBackgroundColor,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              generateBottomNavBarItem(
+                icon: Icons.home_outlined,
+                text: 'Accueil',
+                isActive: true,
+                index: 0,
+              ),
+              generateBottomNavBarItem(
+                icon: Icons.work_outline_outlined,
+                text: 'Services',
+                isActive: false,
+                index: 1,
+              ),
+              generateBottomNavBarItem(
+                icon: Icons.shopping_cart_outlined,
+                text: 'Boutique',
+                isActive: false,
+                index: 2,
+              ),
+              generateBottomNavBarItem(
+                icon: Icons.location_on_outlined,
+                text: 'Cartes',
+                isActive: false,
+                index: 3,
+              ),
+              generateBottomNavBarItem(
+                icon: Icons.help_outline,
+                text: 'Aide',
+                isActive: false,
+                index: 4,
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 
   AppBar builAppBar() {
-    final theme = Theme.of(context).textTheme;
+    final theme = Theme
+        .of(context)
+        .textTheme;
     return AppBar(
       elevation: 0,
       leading: IconButton(
@@ -52,4 +110,81 @@ class _HomeScreenState extends State<HomeScreen> {
       ],
     );
   }
+
+  Material generateBottomNavBarItem({
+    required IconData icon,
+    required bool isActive,
+    required String text,
+    required int index,
+  }) {
+    return Material(
+      color: mixedBlueWhiteBackgroundColor,
+      child: InkWell(
+        onTap: () {
+          setState(() {
+            activeItem = index;
+          });
+        },
+        child: Container(
+          height: 80,
+          width: MediaQuery
+              .of(context)
+              .size
+              .width / 5,
+          child: Padding(
+            padding: const EdgeInsets.only(bottom: 0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Icon(
+                  icon,
+                  size: defaultIconSize,
+                  color: index == activeItem ? primaryColor : inactiveColor,
+                ),
+                index == activeItem
+                    ? Text(
+                  text,
+                  style: Theme
+                      .of(context)
+                      .textTheme
+                      .bodySmall
+                      ?.copyWith(
+                    fontWeight: FontWeight.bold,
+                    color: primaryColor,
+                  ),
+                )
+                    : Container(),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  conditionalDisplay(){
+    switch(activeItem){
+      case 0:
+        return const HomeScreenBody();
+        break; // The switch statement must be told to exit, or it will execute every case.
+      case 1:
+        print('one!');
+        break;
+      case 2:
+        return const Ventes();
+        break;
+      case 3:
+        return const Service_Client();
+        break;
+      case 4:
+        return const Service_Client();
+      default:
+        print('choose a different number!');
+    }
+  }
+
+
+
 }
