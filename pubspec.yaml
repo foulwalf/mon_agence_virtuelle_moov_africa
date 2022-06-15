@@ -36,6 +36,10 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: ^3.0.0
   font_awesome_flutter: ^10.1.0
+  snippet_coder_utils: ^1.0.12
+  google_maps_flutter: ^2.1.8
+  http: ^0.13.4
+  json_serializable: ^6.2.0
 
 dev_dependencies:
   flutter_test:
@@ -47,6 +51,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+  build_runner: ^2.1.11
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -63,6 +68,13 @@ flutter:
   assets:
     - assets/images/bg/
     - assets/images/logo/
+    - assets/images/pictures/s21.jpg
+    - assets/images/pictures/shop-cart.png
+    - assets/images/pictures/help.png
+    - assets/images/pictures/4g.jpg
+    - assets/images/pictures/ask.jpg
+    - assets/images/pictures/claim.png
+    - assets/images/pictures/demande.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
