@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:mon_agence_virtuelle_moov_africa/Services/Demandes/Recap.dart';
 
 import '../../constants/constants.dart';
 import '../../shared_components/vertical_spacer_generator.dart';
-import 'Formulaire.dart';
+import 'Categories.dart';
 
 class Demandes extends StatefulWidget {
   const Demandes({Key? key}) : super(key: key);
@@ -19,17 +20,19 @@ class _Demandes extends State<Demandes> {
     final theme = Theme.of(context).textTheme;
 
     return Scaffold(
-      appBar: builAppBar(),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
+            const SizedBox(
+              height: 50,
+            ),
             GestureDetector(
               onTap: (){
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (_) => const Formulaire(),
+                    builder: (_) => const Categories(),
                   ),
                 );
               },
@@ -46,6 +49,11 @@ class _Demandes extends State<Demandes> {
                   ),
                   height: size.height * .3,
                   decoration: BoxDecoration(
+                    image: const DecorationImage(
+                      alignment: Alignment.topRight,
+                      image: AssetImage('assets/images/pictures/demande.jpg'),
+                      fit: BoxFit.fitWidth
+                  ),
                     color: primaryColorShade2,
                     boxShadow: blueBoxShadows,
                     borderRadius: const BorderRadius.all(
@@ -72,7 +80,7 @@ class _Demandes extends State<Demandes> {
                       Padding(
                         padding: const EdgeInsets.only(top:18.0),
                         child: Text(
-                          'une réclamation',
+                          'une demande',
                           style: theme.headline6?.copyWith(
                               color: white,
                               fontWeight: FontWeight.bold
@@ -91,7 +99,12 @@ class _Demandes extends State<Demandes> {
 
             GestureDetector(
               onTap: (){
-
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => const Recap(),
+                  ),
+                );
               },
               child: Padding(
                 padding: const EdgeInsets.only(top: 55.0,left: 15.0,right: 15.0),
@@ -106,6 +119,11 @@ class _Demandes extends State<Demandes> {
                   ),
                   height: size.height * .3,
                   decoration: BoxDecoration(
+                    image: const DecorationImage(
+                        alignment: Alignment.topRight,
+                        image: AssetImage('assets/images/pictures/demande.jpg'),
+                        fit: BoxFit.fitWidth
+                    ),
                     color: primaryColorShade2,
                     boxShadow: blueBoxShadows,
                     borderRadius: const BorderRadius.all(
@@ -119,7 +137,7 @@ class _Demandes extends State<Demandes> {
                       Row(
                         children: [
                           Text(
-                            'Réclamations ',
+                            'Demandes ',
                             style: theme.headline6?.copyWith(
                                 color: white,
                                 fontWeight: FontWeight.bold,
@@ -177,19 +195,6 @@ class _Demandes extends State<Demandes> {
     );
   }
 
-  AppBar builAppBar() {
-    final theme = Theme
-        .of(context)
-        .textTheme;
-    return AppBar(
-      elevation: 0,
-      leading: IconButton(
-        icon: const Icon(Icons.arrow_back),
-        onPressed: () {
-          Navigator.pop(context);
-        },
-      ),
-    );
-  }
+
 
 }

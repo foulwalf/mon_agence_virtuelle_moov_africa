@@ -5,23 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2761f0b4-c56d-4ead-a729-3c04e2ed5f6f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/images/pictures/4g.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/pictures/ask.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/pictures/ask.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/pictures/claim.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/pictures/claim.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Services/Demandes/Demandes.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Services/Demandes/Formulaire.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Services/Reclamations/Reclamations.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Services/Services.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Services/components/ImageDesc.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Services/components/SearchBar.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/pictures/demande.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Map/Map.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Services/Demandes/Forms/Autres.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Services/Demandes/Forms/Eq_Int.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Services/Demandes/Forms/Flooz.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Services/Demandes/Forms/PostPaids.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Services/Demandes/Forms/SIM.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Services/Demandes/Recap.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Services/Demandes/components/Dropdown.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Service_Client/Service_Client.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Aide/Aide.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Service_Client/components/Dropdown.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Aide/components/Dropdown.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Ventes/Details/Details.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Boutique/Details/Details.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Ventes/Types/Telephones.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Boutique/Types/Telephones.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Ventes/Ventes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Boutique/Boutique.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/pictures/283478569_2368146573327819_8601589336154810128_n.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Services/Demandes/Demandes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Services/Demandes/Demandes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Services/Demandes/Formulaire.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Services/Demandes/Categories.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/home/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/home/home_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>

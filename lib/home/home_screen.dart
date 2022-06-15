@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:mon_agence_virtuelle_moov_africa/Map/Map.dart';
 import 'package:mon_agence_virtuelle_moov_africa/constants/constants.dart';
 import 'package:mon_agence_virtuelle_moov_africa/home/components/home_screen_body.dart';
 import 'package:mon_agence_virtuelle_moov_africa/shared_components/bottom_navbar/bottom_navbar_generator.dart';
@@ -178,7 +179,7 @@ class _HomeScreenState extends State<HomeScreen> {
         return const Boutique();
         break;
       case 3:
-        return const Aide();
+        return const Maps();
         break;
       case 4:
         return const Aide();
