@@ -37,9 +37,9 @@ dependencies:
   google_fonts: ^3.0.0
   font_awesome_flutter: ^10.1.0
   snippet_coder_utils: ^1.0.12
-  google_maps_flutter: ^2.1.8
   http: ^0.13.4
   json_serializable: ^6.2.0
+  google_maps_flutter: ^2.1.8
 
 dev_dependencies:
   flutter_test:
